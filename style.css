@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.9);  /* Slight transparency for a soft look */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 30px;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #0056b3;
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 85%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#weather-info {
+    margin-top: 30px;
+}
+
+#location {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#temperature {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+#description {
+    font-size: 18px;
+    color: #555;
+}
+
+#wind, #humidity {
+    font-size: 16px;
+    color: #777;
+}
+
+#weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#weather-icon:hover {
+    transform: rotate(20deg);
+}
+
+@media (max-width: 600px) {
+    .weather-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input {
+        width: 75%;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    #temperature {
+        font-size: 24px;
+    }
+
+    #location {
+        font-size: 20px;
+    }
+}
